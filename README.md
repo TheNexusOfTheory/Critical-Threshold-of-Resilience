@@ -40,6 +40,14 @@ The file **`data/tcr_simulation_results.csv`** contains the discrete values for 
 
 ***
 
+## 🤝 Code Suggestions Policy
+
+Due to the repository's restrictive license (All Rights Reserved), we do not accept external Pull Requests.
+
+If you have suggestions for bug fixes, optimizations, or new features, please **open a new Issue** and attach your proposed changes as a code block or a .patch file for manual review and inclusion by the primary author.
+
+***
+
 ## 🔗 Citation and Permanent Archive
 
 This code has been archived on **Zenodo** to ensure permanence and citability.
