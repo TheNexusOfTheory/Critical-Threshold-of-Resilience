@@ -5,27 +5,25 @@ import matplotlib.pyplot as plt
 # --- Resilience Rate (Base Formula) ---
 # We use the base formula R(A, E, n)
 def resilience(A, E, n):
-    # Ac represents the Critical Adaptive Amplitude (Ac)
     Ac = E / n
-    # Logistic function: R approaches 1 as A increases past Ac
     return 1 / (1 + np.exp(-(A - Ac)))
 
-# --- Parameters and Thresholds ---
+# --- Parameters and Thresholds for Figure 1 ---
 # 1. Internal Separatrix (Reference Threshold A_c_int)
 E_int = 6  # Base external pressure (Stress Factor E)
 n_int = 2  # Base Complexity Factor (n)
-A_c_int = E_int / n_int  # Result: 3.0
+A_c_int = E_int / n_int  # Result: 3.0 (Matches Ac=3.0 in plot label)
 
 # 2. External Separatrix (Shifted Threshold A_c_ext)
 # Represents a scenario of greater External Stress (E)
 E_ext = 8  # Higher external pressure
 n_ext = 2  # Same complexity
-A_c_ext = E_ext / n_ext  # Result: 4.0
+A_c_ext = E_ext / n_ext  # Result: 4.0 (Matches Ac'=4.0 in plot label)
 
 # --- Range of A Values and Curves ---
 A_range = np.linspace(0, 6, 200)
 
-# Main curve (using internal parameters)
+# Main curve (using the internal parameters E_int=6, n_int=2)
 R_values_int = resilience(A_range, E_int, n_int)
 
 # --- Plot ---
@@ -35,7 +33,7 @@ plt.figure(figsize=(8,6))
 plt.plot(A_range, R_values_int, color="blue", linewidth=2, label="Resilience Curve $R(A, E, n)$")
 
 # 1. Internal Separatrix (Coherence Threshold)
-# The point where R=0.5 under internal conditions (E=6, n=2).
+# The point where R=0.5 under the internal conditions (E=6, n=2).
 plt.axvline(x=A_c_int, linestyle="-", color="#32CD32", linewidth=2, label="Internal Separatrix ($A_{c}=3.0$)")
 
 # 2. External Separatrix (Stress Threshold)
