@@ -38,7 +38,7 @@ plt.axvline(x=A_c_int, linestyle="-", color="#32CD32", linewidth=2, label="Inter
 
 # 2. External Separatrix (Stress Threshold)
 # The threshold the system would shift to under higher pressure (E=8, n=2).
-plt.axvline(x=A_c_ext, linestyle="--", color="red", linewidth=2, label="External Separatrix ($A'_{c}=4.0$)")
+plt.axvline(x=A_c_ext, linestyle="--", color="red", linewidth=2, label="External Separatrix ($A_c^{(2)} = 4.0$)")
 
 # Resilience Line R=0.5
 plt.axhline(y=0.5, linestyle=":", color="gray")
